@@ -1,0 +1,24 @@
+<div ng-controller="loginController" ng-hide="hideLog">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="panel-body text-center">
+				<img src="img/icon.png">
+			</div>
+			<div class="panel-body text-center">
+				<div class="form-group" ng-show="noValid">
+			      	<div class="alert alert-danger">{{errorMessage}}</div>
+			    </div>
+				<form role="form" name="IPForm" ng-submit="ipAddress(IPForm.$valid, reload)" novalidate>
+					<div class="row">
+						<div class="form-group">
+							<input type="text" class="form-control input-lg" placeholder="IP Address" ng-model="ip.ipaddress" required>
+							<input type="text" class="form-control input-lg" placeholder="Port n°" ng-model="ip.portNumber" required>
+						</div>
+						<button class="btn btn-default" type="submit">Connection</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
